@@ -10,6 +10,6 @@ class ChunkAdmin(admin.ModelAdmin):
         if db_field.name in ['content']:
             kwargs['widget'] = TinyMCE(attrs={'rows': 4})
 
-        return super(ChunkAdmin1, self).formfield_for_dbfield(db_field, **kwargs)
+        return super(ChunkAdmin, self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(Chunk, ChunkAdmin)
