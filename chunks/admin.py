@@ -3,7 +3,7 @@ from models import Chunk
 from tinymce.widgets import TinyMCE
 
 class ChunkAdmin(admin.ModelAdmin):
-    list_display = ('key','description',)
+    list_display = ('key',)
     search_fields = ('key', 'content')
 
     def formfield_for_dbfield(self, db_field, **kwargs):
